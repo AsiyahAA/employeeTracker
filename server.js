@@ -55,27 +55,33 @@ function viewDept() {
 
     db.query('SELECT * FROM departments', function (err, results) {
         console.log(results);
+        console.table(results);
+
+        startApp();
       });
 
-    startApp();
 }
 //connect to schema.sql and seeds.sql
 function viewRole() {
 
     db.query('SELECT * FROM roles', function (err, results) {
         console.log(results);
+        console.log(results);
+
+        startApp();
       });
     
-    startApp();
 }
 //connect to schema.sql and seeds.sql
 function viewEmp() {
 
     db.query('SELECT * FROM employees', function (err, results) {
         console.log(results);
+        console.table(results)
+
+        startApp();
       });
     
-    startApp();
 }
 //connect to schema.sql and seeds.sql
 function addDept() {
@@ -97,6 +103,7 @@ function addUpdate() {
             
     startApp();
 }
+startApp();
 
 app.use((req, res) => {
     res.status(404).end();
