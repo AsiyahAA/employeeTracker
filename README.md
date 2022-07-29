@@ -11,11 +11,11 @@
 ### GitBash Terminal is once again needed to updload edits made in your local repository onto GitHub-using the same commands of git add ./git commit -m/git push in order for the changes to be displayed when website is deployed. 
 ### Screencastify was also used in recoridng a walk-through demostration of the employeeTracker.
 ## Screenshot
-### <img width="1128" alt="2022-07-21 (9)" src="https://user-images.githubusercontent.com/104933717/180347262-85097fe1-ee8c-4e11-a129-a1a767b810f7.png">
-### <img width="1128" alt="2022-07-21 (8)" src="https://user-images.githubusercontent.com/104933717/180347304-c99b9ccd-fcdf-46a1-bce9-c9416bb2c184.png">
+### <img width="1128" alt="2022-07-28 (4)" src="https://user-images.githubusercontent.com/104933717/181662662-8c9c2652-ae0e-44a6-aa09-54b6fceb7cc7.png">
+### <img width="1128" alt="2022-07-28 (5)" src="https://user-images.githubusercontent.com/104933717/181662692-fee39e07-edb0-4d2a-9217-2e71bf31eebd.png">
 ## Video Link
-### https://drive.google.com/file/d/128mqezkX7ZUk6ZE5r6BPENQv7RZQrSev/view
+### https://drive.google.com/file/d/1yBBGZnY3HrETPGdUQeWJLQAt-uBKE1ji/view
 ## Status 
-### employeeTracker is working sucessfully on almost all prompts and takes user input. Unfortunetly, option for user to update employees is not functioning correctly and will need to be worked on in the future.   
+### employeeTracker is working sucessfully on almost all prompts and takes user input. Unfortunetly, option for user to update employees and add employees is not functioning correctly and will need to be worked on in the future.   
 ## Credits/Sources 
-### Tutoring, WW3 Schools, TA's, Stack Overflow
+### Tutoring, WW3 Schools, TA's, Stack Overflow, Slack AskBot
