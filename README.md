@@ -1,1 +1,21 @@
 # employeeTracker
+## Description
+### Project purpose was to use the command-line terminal in VS Code to run an employee tracker that uses node and mysql together to take in information and data and display it. The User would be able to select from an array of choices about a company database and input information as well. 
+## User
+### User should be able to see run the program from the command-line by running mysql and then running node. An inquirer prompt will show asking the User to choose from an array of choices regarding the company database. Each choice will show the result in a table in the console. In addition, the User can also add departments, add roles, add employees, 
+## Technologies
+### GitHub was used to clone a new repository onto a computer and was also used to deploy the website when edits where finished and final version needed to be deployed. Visual Studio Code was used to create JavaScript files to clone starter code and make other code from scratch. GitBash Terminal was used to git add/commit/push edits made from local repository onto GitHub to update respository.
+## Setup
+### Tools needed are GitHub to name and clone repository onto local computer/repository. GitBash Terminal should be installed and one can clone repository with either an SSH key or the HTML URL and with the command-git clone-and copying in the URL or SSH key, upload to Terminal-making sure they are not within another folder but in the main branch-and using the commands git add . (press enter) then git commit -m "detailed description of your edits" (press enter) then git push (press enter) and entering their SSH key if promted. 
+### A new folder should be created and once Visual Studio Code is installed, open the new folder in VS and make a new JavaScript folders if there is no started code provided. Starter code folders should be copied onto your own repository and inquirer version 8 should be installed using the terminal in VS code. Run the commands npm init -y, npm install inquirer@8, and then npm install to get additional files needed (such as package.jon, gitignore, etc). Also install jest to run tests on your code (run the command npm i jest to install). Once all is installed, start coding and view all changes and progress made in the "Open Terminal" when you right click on the JavaScript file.
+### GitBash Terminal is once again needed to updload edits made in your local repository onto GitHub-using the same commands of git add ./git commit -m/git push in order for the changes to be displayed when website is deployed. 
+### Screencastify was also used in recoridng a walk-through demostration of the readMe generator.
+## Screenshot
+### <img width="1128" alt="2022-07-21 (9)" src="https://user-images.githubusercontent.com/104933717/180347262-85097fe1-ee8c-4e11-a129-a1a767b810f7.png">
+### <img width="1128" alt="2022-07-21 (8)" src="https://user-images.githubusercontent.com/104933717/180347304-c99b9ccd-fcdf-46a1-bce9-c9416bb2c184.png">
+## Video Link
+### https://drive.google.com/file/d/128mqezkX7ZUk6ZE5r6BPENQv7RZQrSev/view
+## Status 
+### employeeTracker is working sucessfully on almost all prompts and takes user input. Unfortunetly, option for user to update employees is not functioning correctly and will need to be worked on in the future.   
+## Credits/Sources 
+### Tutoring, WW3 Schools, TA's, Stack Overflow
