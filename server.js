@@ -50,40 +50,42 @@ function startApp() {
     
     })
 }
-//connect to schema.sql and seeds.sql
+
+startApp();
+
 function viewDept() {
 
     db.query('SELECT * FROM departments', function (err, results) {
-        // console.log(results);
+        
         console.table(results);
 
         startApp();
     });
 
 }
-//connect to schema.sql and seeds.sql
+
 function viewRole() {
 
     db.query('SELECT roles.title, roles.salary, departments.department_name FROM roles JOIN departments ON roles.department_id = departments.id', function (err, results) {
-        // console.log(results);
+        
         console.table(results);
 
         startApp();
     });
     
 }
-//connect to schema.sql and seeds.sql
+
 function viewEmp() {
 
     db.query('SELECT * FROM employees', function (err, results) {
-        // console.log(results);
+    
         console.table(results);
 
         startApp();
     });
     
 }
-//connect to schema.sql and seeds.sql and add a department/insert into table
+
 function addDept() {
     inquirer.prompt([
         {
@@ -97,15 +99,15 @@ function addDept() {
         console.log(answers)
 
         db.query(`INSERT INTO departments (department_name) VALUES ("${answers.deptName}")`, function (err, results) {
-            // console.log(results);
-            // console.table(results);
+            
+            console.table(results);
     
             startApp();
         });
         
     })
 }
-//connect to schema.sql and seeds.sql and add these responses into the seeds/table
+
 function addRole() {
     inquirer.prompt([
         {
@@ -128,14 +130,16 @@ function addRole() {
     .then((answers) => {
         console.log(answers)
 
-        db.query(`INSERT INTO roles (title, salary, department_id) VALUES ("${answers.roleName}, ${answers.roleSalary}, ${answers.roleDept}")`, function (err, results) {
+        db.query(`INSERT INTO roles (title, salary, department_id) VALUES ("${answers.roleName}", ${answers.roleSalary}, ${answers.roleDept})`, function (err, results) {
+
+            console.table(results);
         
     startApp();
     })
 })
     
 }
-//connect to schema.sql and seeds.sql and add responses to seeds file/table
+
 function addEmp() {
     inquirer.prompt([
         {
@@ -152,42 +156,35 @@ function addEmp() {
         type: "input",
         name: "employeeRole",
         message: "What is the role id of this employee?",
-        }, 
-        // {
-        // type: "input",
-        // name: "employeeMan",
-        // message: "Who is the manager of this employee?",
-        // },       
+        },      
     ])
     .then((answers) => {
         console.log(answers)
 
-        db.query(`INSERT INTO employees (first_name, last_name, role_id) VALUES ("${answers.employeeFirst}, ${answers.employeeLast}, ${answers.roleDept}")`, function (err, results) {
+        db.query(`INSERT INTO employees (first_name, last_name, role_id) VALUES ("${answers.employeeFirst}), VALUES ("${answers.employeeLast}), VALUES ${answers.roleDept}")`, function (err, results) {
         
     startApp();
     })
 })
 }
-//connect to schema.sql and seeds.sql allow inquirer prompt to change table and update
+
 function addUpdate() {
     inquirer.prompt([
         {
         type: "input",
-        name: "getName",
-        message: "What is your name?",
+        name: "empName",
+        message: "Which employee would you like to update?",
         },
     ])
     .then((answers) => {
         console.log(answers)
+
+        db.query(`UPDATE employees SET employees.role_id = <${answers.empName}> WHERE employees.id = ${answers.id}`)
         
     startApp();
     })    
 }
+
 startApp();
 
-//selecting employees table, list array of employees as choices (who to updates?), an id should be given of their employee id, update query sql to update (update only the role-id
-// SET column1 = value1
-// WHERE condition;
-//UPDATE employees SET employees.role_id = <answer> WHERE employees.id = <answer>;
-//what role to be updated to
   
