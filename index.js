@@ -2,11 +2,11 @@ const inquirer = require("inquirer");
 const express = require('express');
 const mysql = require('mysql2');
 
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
 const db = mysql.createConnection(
     {
@@ -51,7 +51,6 @@ function startApp() {
     })
 }
 
-startApp();
 
 function viewDept() {
 
@@ -161,10 +160,12 @@ function addEmp() {
     .then((answers) => {
         console.log(answers)
 
-        db.query(`INSERT INTO employees (first_name, last_name, role_id) VALUES ("${answers.employeeFirst}), VALUES ("${answers.employeeLast}), VALUES ${answers.roleDept}")`, function (err, results) {
-        
-    startApp();
-    })
+        db.query(`INSERT INTO employees (first_name, last_name, role_id) VALUES ("${answers.employeeFirst}", "${answers.employeeLast}", ${answers.employeeRole})`, function (err, results) {
+            if(err){
+                console.log(err)
+            }
+        })
+        startApp()
 })
 }
 
@@ -187,4 +188,3 @@ function addUpdate() {
 
 startApp();
 
-  
